@@ -14,7 +14,7 @@ const connection = mysql.createConnection({
     database:"e-commerce_project"
 });
 
-const hostname = '0.0.0.0';
+//const hostname = '0.0.0.0';
 const port = 8080;
 
 let app = express();
@@ -41,7 +41,7 @@ connection.connect((error) => {
     console.log('Connected to mysql database');
 });
 
-
+/*
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
@@ -51,7 +51,7 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
     console.log(`Server started on http://${hostname}:${port}/`);
 });
-
+*/
 
 // root: localhost:8080
 // route loads product data /landing page
