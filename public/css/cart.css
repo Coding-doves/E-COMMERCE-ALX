@@ -1,0 +1,53 @@
+.cartBasket{
+    width: 400px;
+    background-color: black;
+    color: #fff;
+    position: fixed;
+    inset: 0 -400px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+}
+.cartBasket h1{
+    padding: 0.6rem;
+    margin: 0.6rem;
+    font-weight: 400;
+}
+.cartBasket .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartBasket .btn button{
+    background-color:chocolate;
+    color: wheat;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+.cartBasket .btn button.close{
+    background-color: whitesmoke;
+    color: brown;
+}
+.cartBasket .cartList .item img{width: 100%;}
+.cartBasket .cartList .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+.cartBasket .cartList .item .quantity span{
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: white;
+    color: rgb(102, 100, 100);
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+}
+.cartBasket .cartList .item .quantity span:nth-child(2){
+    background-color: transparent;
+    color: whitesmoke;
+}
+.cartBasket .cartList .item:nth-child(odd){background-color: #eee1;}

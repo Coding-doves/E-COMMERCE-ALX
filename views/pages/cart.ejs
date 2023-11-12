@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cart</title>
+</head>
+<body>
+    <div class="cartBasket">
+        <h1>My CART</h1>
+
+            <div class="cartList">
+        <% cart.forEach(function(item){ %>
+            <div class="item">
+                    <div class="image">
+                        <img src="images/<%= item.image %>" alt="">
+                    </div>
+                    <div class="name"><%= item.name %></div>
+
+                    <% if(item.sale_price){  %>
+                        <small><div class="price">$<%= item.sale_price</div></small>
+                    <% }else{ %>
+                        <small><div class="price">$<%= item.price</div></small>
+                    <% } %>
+                    <div class="quantity">
+                        <form action="">
+                            <input type="number" name="quantity" value="1">
+                            <input type="submit" name="edit_product_quantity_btn" class="edit-btn" value="edit">
+                        </form>
+                    </div>
+                    <form action="">
+                        <input type="submit" name="remove_btn" class="remove_btn" value="remove">
+                    </form>
+                </div>
+                <% if(item.sale_price) { %>
+                    <span class="product-price">$<%= item.sale_price * item.quantity %></span>
+                <% }else{ %>
+                    <span class="product-price">$<%= item.price * item.quantity %></span>
+                <% } %>
+                <% }) %>
+            </div>
+
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="checkout">CHECKOUT</button>
+        </div>
+    </div>
+</body>
+</html>
