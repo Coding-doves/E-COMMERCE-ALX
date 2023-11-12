@@ -3,6 +3,8 @@ const ejs = require('ejs');
 const bodyParser  = require('body-parser');
 const mysql = require('mysql');
 const session = require('express-session')
+const https = require('http');
+const { hostname } = require('os');
 
 //connect to mysql database.
 const connection = mysql.createConnection({
@@ -11,6 +13,9 @@ const connection = mysql.createConnection({
     password:"",
     database:"e-commerce_project"
 });
+
+const hostname = '0.0.0.0';
+const port = 8080;
 
 let app = express();
 
@@ -35,29 +40,17 @@ app.use(session({
 connection.connect((error) => {
     console.log('Connected to mysql database');
 });
-/*
-function isProductInCart(cart, id){
-    for(i = 0; i < cart.length; i++){
-        if (cart[i].id == id){ return true; }
-    }
-
-    return false;
-}
 
 
-function calculateTotalCartItem(cart, req) {
-    total = 0;
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Zeet Node');
+});
 
-    for(i = 0; i < cart.length; i++){
-        if(cart[i.sale_price]){
-            total += (cart[i].sale_price * cart[i].quantity);
-        }else{
-            total += (cart[i].price *  cart[i].quantity);
-        }
-    }
-    req.eSession.total = total;
-    return total;
-};*/
+server.listen(port, hostname, () => {
+    console.log(`Server started on http://${hostname}:${port}/`);
+});
 
 
 // root: localhost:8080
@@ -131,34 +124,6 @@ app.get('/remove_item', (req, res) => {
 });
 
 
-app.listen(8080, () => {
+app.listen(port, () => {
     console.log('Server started on localhost:8080')
 });
-    
-    /* 
-    let product = {id:id, name:name, price:price, sale_price:sale_price, quantity:quantity, image:image};
-    
-    let cart;
-    if (req.eSession.cart) {
-        cart = req.eSession.cart;
-
-        if (!isProductInCart(cart, id)) {
-            cart.push(product);
-        }
-    }else{
-        req.eSession.cart = [product];
-        cart = req.eSession.cart;
-    }
-
-    calculateTotalCartItem(cart, req);
-
-    //return to cart
-});
-
-
-app.get('/cart', function(req, res) {
-    let cart = req.eSession.cart;
-    let total = req.eSession.total;
-
-    res.render('pages/cart.ejs', {cart:cart, total:total});})
-*/
