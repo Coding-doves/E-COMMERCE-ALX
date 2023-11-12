@@ -5,3 +5,11 @@ To be built on Etherum
 stripe and/or paypal
 
 This is an academic project
+### Tools To be  used
+
+- Nodejs with Express
+- MySQL DB
+- Solidity
+- Etherum
+- HTML5, CSS, and JS
+
