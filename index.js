@@ -176,7 +176,7 @@ app.get('/product/:id', function(req, res) {
 
         const product = result[0];
         
-        const { total, item_count } = calculateTotalCartItem(request);
+        const { total, item_count } = calculateTotalCartItem(req);
 
         res.render('pages/product', {productId, item_count: item_count});
     });
