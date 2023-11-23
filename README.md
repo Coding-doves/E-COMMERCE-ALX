@@ -12,4 +12,5 @@ This is an academic project
 - Solidity
 - Etherum
 - HTML5, CSS, and JS
+- Bootstrap
 

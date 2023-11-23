@@ -1,0 +1,128 @@
+.goods-sect{
+    width: 100%;
+    margin-top: 120px;
+    padding: 0 2rem;
+    display: flex;
+    gap: 30px;
+}
+.goods{
+    width: 70%;
+    height: 600px;
+    object-fit: cover;
+}
+.goods-title, .goods-price{
+    font-size: 50px;
+    color: #007676;
+    text-transform: capitalize;
+}
+.goods-price{
+    font-size: 35px;
+}
+.goods-desc{
+    margin: 30px 0;
+    opacity: 0.5;
+    font-size: 18px;
+    line-height: 20px;
+}
+.rate{
+    display: flex;
+}
+.rate img{
+    width: 27px;
+    height: 27px;
+}
+.rate-num{
+    opacity: 0.4;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 20px;
+}
+.brand{
+    font-size: 20px;
+    margin: 28px 0;
+}
+.goods-btn button{
+    background-color: transparent;
+    border: 3px solid #007676;
+    outline: none;
+    border-radius: 5px;
+    color: #007676;
+    text-transform: capitalize;
+    padding: 1rem 1.3rem;
+    margin: 10px;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.goods-btn button:nth-child(1), .like-it button{
+    background: #007676;
+    color: aliceblue;
+}
+.others{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 20px;
+}
+.description, .like-it{
+    padding: 20px;
+}
+.description h1, .like-it h1{
+    font-size: 40px;
+    opacity: 0.9;
+    text-align: center;
+}
+.description p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    opacity: .8;
+}
+.like-it{
+    text-transform: capitalize;
+}
+.like-it .child{
+    display: flex;
+    flex-direction: column;
+}
+.like-it textarea, .like-it input{
+    padding: 10px;
+    outline: none;
+    border: 2px solid darkgray;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+::placeholder{
+    color: darkgray;
+}
+.like-it textarea:focus, .like-it input:focus{border-color: #007676;}
+.like-it textarea:focus::placeholder, .like-it input:focus::placeholder{
+    color: #007676;
+}
+.rating-text{
+    color: darkgray;
+    margin: 10px 0;
+}
+.star, .rate{
+    height: 35px;
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+}
+.star i, .rate i{
+    width: 22px;
+    height: 22px;
+}
+.star i img, .rate i img{
+    width: 21px;
+    height: 21px;
+}
+.like-it button{
+    outline: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

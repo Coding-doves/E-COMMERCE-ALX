@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Shopping</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playpen+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- style css -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- fevicon -->
+    <link rel="icon" href="/images/fevicon.png" type="image/gif" />
+    <!------- font awesome cdn -------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<!-- body -->
+
+<body>
+    
+    <!-- advert_section -->
+    <div class="advert_section">
+        <div class="title">
+            <span>Shopping Time</span>
+        </div>
+        <div class="more">
+            <p>
+                <i class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></i>
+                Christmas is here again Check out our offer. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                <button class="a-btn transparent">Start Shopping</button></p>
+        </div>
+    </div>
+    <!-- end advert_section -->
+
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <nav>
+            <div class="logo">
+                <a href="/index"><img src="/images/logo.png" alt="logo"></a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="active"> <a href="/index">Home</a> </li>
+                    <li> <a href="about.html">About</a> </li>
+                    <li><a href="/shop">Shop</a></li>
+                    <li><a href="special.html">Specials</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li></li>
+                </ul>
+            </div>
+            <!--search bar -->
+            <div class="s_bar location">
+                <input type="text" placeholder="Choose Menu With Ease" class="s_input">
+            </div>
+            <!-- Take action buttons 
+            <div class="action-btn-div">
+                <button class="a-btn">Make Order</button>
+                <p class="or">or</p>
+                <button class="a-btn transparent">Make Reservation</button>
+            </div>-->
+            <div class="user">
+                <a href="#"><img src="/images/user-1.png" alt="" class="reviewer-img"></a>
+            </div>
+            <div class="cartIcon">
+                <i class="fa fa-shopping-basket cart_icon" aria-hidden="true"></i>
+                <span><%= item_count %></span>
+            </div>
+        </nav>
+        <!-- end header inner -->
+    </header>
+   
+    <!-- cart basket-->
+    <div class="cartBasket">
+        <div class="card">
+            <div class="card-header"><b>Shopping Cart</b></div>
+            <!-- cart table -->
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Top Up</th>
+                        <th>Unit Price</th>
+                        <th>Total price</th>
+                        <th>Remove</th>
+                    </tr>
+                    <!-- if cart is not empty --> 
+                    <% if(cart.length > 0) {
+                        let total = 0;
+
+                        cart.forEach(item => {
+                    %>
+                        <tr>
+                            <td><img src="images/<%= item.image %>"  style="width: 90%;" alt=""></td>
+                            <td><%= item.name %></td>
+                            <td><%= item.quantity %></td>
+
+                            
+                            <!-- add more product -->
+                            <form action="/update_quantity" method="post">
+                                <td style="display: flex; flex-direction: column; gap: 4px;">
+                                    <input type="number" name="quantity" value="<%= item.quantity %>" style="width:80%;" min="1">
+                                    <input type="hidden" name="id" value="<%= item.id %>">
+                                    <button type="submit" class="btn btn-primary btn-sm">Add Up</button>
+                                </td>
+                            </form>
+
+                            
+                            <% if(item.sale_price){  %>
+                                <!-- if discount is given -->
+                                <td>$<%= item.sale_price %></td>
+                                <td>$<%= parseFloat(item.quantity) * parseFloat(item.sale_price) %></td>
+                            <% }else{ %>
+                                <!-- No discount is given. Original price-->
+                                <td>$<%= item.price %></td>
+                                <td>$<%= parseFloat(item.quantity) * parseFloat(item.price) %></td>
+                            <% } %>
+                            
+                            <td><button type="button" class="btn btn-danger btn-sm" onclick="remove_item(<%= item.id %>)"><b>Remove</b></button></td>
+                        </tr>
+                    <%
+                        <!-- if discount is given -->
+                        if(item.sale_price){  
+                            total += parseFloat(item.quantity) * parseFloat(item.sale_price)
+                        }else{
+                            <!-- No discount is given. Original price-->
+                            total += parseFloat(item.quantity) * parseFloat(item.price)
+                        }
+                    });
+                    %>
+                        <tr>
+                            <td colspan="3" align="right"><b>Total</b></td>
+                            <td><%= total %></td>
+                            <td>&nbsp;</td>
+                        </tr>
+
+                    <!-- if cart is empty -->
+                    <% }else{ %>
+                        <tr>
+                            <td colspan="5" align="center"> No item added</td>
+                        </tr>
+                    <% } %>
+                </table>
+            </div>
+
+            <!-- checkout button-->
+            <div class="checkout">
+                <form action="/checkout" method="get">
+                    <input type="submit" value="CHECKOUT" name="" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+        </div>
+    </div>
+    <!-- cart basket ends -->
+

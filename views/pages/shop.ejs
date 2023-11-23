@@ -1,0 +1,177 @@
+<%- include('./_header_footer/shopheader') %>
+
+    <div class="title">
+        <h2>Our Brand</h2>
+    </div>
+    <div class="container">
+        <!-- shop products-->
+        <section class="best-selling">
+            <h1 class="best-selling-h1"> Shop Products</h1>
+            <div class="best-selling-product">
+                <% products.forEach(item => { %>
+                    <div class="card-grid">
+                        <a href="/product/<%= item.id %>">
+                            <div class="prod-card">
+                                <img src="images/<%= item.image %>" alt="img" class="prod-img" />
+        
+                                <% if(item.sale_price){ %>
+                                    <h3>$<strong class="red"><%= item.sale_price %></strong></h3>
+                                    <h3 style="text-decoration: line-through; font-size: small;">$<strong class="red"><%= item.price %></strong></h3>
+                            
+                                <% }else{ %>
+                                    <h3>$<strong class="red"><%= item.price %></strong></h3>
+                                <% } %>
+                                <span class="prod-name"><%= item.name %> <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                                <!--rating--
+                                <i><img src="images/star.png"/></i>
+                                <i><img src="images/star.png"/></i>
+                                <i><img src="images/star.png"/></i>
+                                <i><img src="images/star.png"/></i>
+                                -->
+                            </div>
+                        </a>
+    
+                        <form action="/add_to_cart" method="post">
+                            <input type="hidden" name="id" value="<%= item.id %>">
+                            <input type="hidden" name="name" value="<%= item.name %>">
+                            <input type="hidden" name="price" value="<%= item.price %>">
+                            <input type="hidden" name="image" value="<%= item.image %>">
+                            <input type="hidden" name="sale_price" value="<%= item.sale_price %>">
+                            <input type="hidden" name="quantity" value="1" min="1">
+                            <input type="submit" value="Shop Now" class="btn buy">
+                        </form>
+                    </div>
+                <% }) %>
+            </div>
+        </section>
+        <!-- shop products ends-->
+        <div class="">
+            <button class="a-btn transparent"><a href="#">See More</a></button></p>
+        </div>
+    </div>
+
+
+
+    <!-- clients 
+    <div class="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>what say our clients</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clients_red">
+        <div class="container">
+            <div id="testimonial_slider" class="carousel slide" data-ride="carousel">
+                <-- Indicators --
+                <ul class="carousel-indicators">
+                    <li data-target="#testimonial_slider" data-slide-to="0" class=""></li>
+                    <li data-target="#testimonial_slider" data-slide-to="1" class="active"></li>
+                    <li data-target="#testimonial_slider" data-slide-to="2" class=""></li>
+                </ul>
+                <-- The slideshow --
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <div class="testomonial_section">
+                            <div class="full center">
+                            </div>
+                            <div class="full testimonial_cont text_align_center cross_layout">
+                                <div class="cross_inner">
+                                    <h3>Due markes<br><strong class="ornage_color">Rental</strong></h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
+                                    </p>
+                                    <div class="full text_align_center margin_top_30">
+                                        <img src="icon/testimonial_qoute.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item active">
+
+                        <div class="testomonial_section">
+                            <div class="full center">
+                            </div>
+                            <div class="full testimonial_cont text_align_center cross_layout">
+                                <div class="cross_inner">
+                                    <h3>Due markes<br><strong class="ornage_color">Rental</strong></h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
+                                    </p>
+                                    <div class="full text_align_center margin_top_30">
+                                        <img src="icon/testimonial_qoute.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item">
+
+                        <div class="testomonial_section">
+                            <div class="full center">
+                            </div>
+                            <div class="full testimonial_cont text_align_center cross_layout">
+                                <div class="cross_inner">
+                                    <h3>Due markes<br><strong class="ornage_color">Rental</strong></h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
+                                    </p>
+                                    <div class="full text_align_center margin_top_30">
+                                        <img src="icon/testimonial_qoute.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <-- end clients --
+    !-- contact --
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>Contact us</h2>
+                    </div>
+                    <form class="main_form">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <input class="form-control" placeholder="Your name" type="text" name="Your Name">
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <input class="form-control" placeholder="Email" type="text" name="Email">
+                            </div>
+                            <div class=" col-md-12">
+                                <input class="form-control" placeholder="Phone" type="text" name="Phone">
+                            </div>
+                            <div class="col-md-12">
+                                <textarea class="textarea" placeholder="Message"></textarea>
+                            </div>
+                            <div class=" col-md-12">
+                                <button class="send">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    !-- end contact --
+    </div>
+    </div>
+    -->
+    <!-- cart session -->
+    
+
+<%- include('./_header_footer/pagfooter') %>   

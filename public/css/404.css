@@ -1,0 +1,28 @@
+header{
+    width: 100%;
+    height: 100vh;
+    background: url('../images/device.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+}
+header p:nth-child(1){
+    font-size: 6rem;
+    margin-bottom: 2rem;
+}
+header button a{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: capitalize;
+}
+header button{
+    background-color: #007676;
+    border-radius: 4px;
+    padding: 20px 40px;
+    border: none;
+}

@@ -1,0 +1,147 @@
+
+<%- include('./_header_footer/productheader') %>
+
+    <!-- product details -->
+    <section class="goods-sect">
+        <img src="images/bag-coffee.png" alt="" class="goods">
+        <div class="goods-details">
+            <h1 class="goods-title"><%= product.name %></h1>
+            <span class="brand">Brand: <%=product.brand %></span> <br>
+            <span class="goods-price">Price: $ <%=product.price %></span>
+            <div class="goods-desc"><%=product.description %>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus enim, qui, soluta sequi culpa incidunt voluptate asperiores, eum dignissimos aperiam laudantium neque!
+            </div>
+            <div class="rate">
+                <i><img src="images/star.png"/></i>
+                <i><img src="images/star.png"/></i>
+                <i><img src="images/star.png"/></i>
+                <i><img src="images/star.png"/></i>
+                <span class="rate-num">5,180 reviews</span>
+            </div>
+            <div class="goods-btn">
+                <button class="">Buy Now</button>
+                <button class="">add to basket</button>
+            </div>
+        </div>
+    </section>
+    <!-- product details ends -->
+
+    <!-- others things-->
+    <section class="others">
+        <!-- description -->
+        <div class="description">
+            <h1>More Information</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Facere consectetur quasi officiis natus numquam quod, magnam ullam,
+                illo veritatis nisi adipisci delectus autem esse enim ab iure, nam tenetur velit? <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quo necessitatibus hic maxime ea rem perspiciatis deleniti repudiandae quibusdam 
+                numquam incidunt aut sed delectus corrupti, pariatur possimus, tempore consequuntur 
+                accusamus repellendus!
+            </p>
+        </div>
+        <div class="like-it">
+            <div class="child">
+                <h1>review title</h1>
+                <input type="text" class="headline" placeholder="Leave a review">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your comment" class="review-field"></textarea>
+                <span class="rating-text">Give a thumbs up if this a good product?</span>
+                <div class="star">
+                    <i><img class="rating-star" src="images/no-star.png"/></i>
+                    <i><img class="rating-star" src="images/no-star.png"/></i>
+                    <i><img class="rating-star" src="images/no-star.png"/></i>
+                    <i><img class="rating-star" src="images/no-star.png"/></i>
+                </div>
+            </div>
+            <button>submit review</button>
+        </div>
+    </section>
+    <!-- others things-->
+    
+    <!-- reviews -->
+    <div class="reviews">
+        <div class="review-box">
+            <div class="reviewer-info">
+                <img src="/images/user-1.png" alt="" class="rever-img">
+
+                <div class="reviewer">
+                    <div class="reviewer-rating">
+                        <i><img src="images/star.png"/></i>
+                        <i><img src="images/star.png"/></i>
+                        <i><img src="images/star.png"/></i>
+                        <i><img src="images/no-star.png"/></i>
+                        <p>400</p>
+                    </div>
+                    <h2 class="reviewer-name">Ada</h2>
+                </div>
+            </div>
+            <div class="reviewer-comment">
+                <i class="fa-solid fa-quote-left"></i>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis tenetur voluptas magnam a labore sed corporis dolores omnis quo repellat beatae, repudiandae voluptatum, alias, earum deserunt rerum inventore corrupti pariatur.
+                </p>
+            </div>
+        </div>
+        <div class="review-box">
+            <div class="reviewer-info">
+                <img src="/images/godisable.png" alt="" class="rever-img">
+                <div class="reviewer">
+                    <div class="reviewer-rating">
+                        <i><img src="images/star.png"/></i>
+                        <i><img src="images/star.png"/></i>
+                        <i><img src="images/star.png"/></i>
+                        <i><img src="images/star.png"/></i>
+                        <p>5,320</p>
+                    </div>
+                    <h2 class="reviewer-name">Ada</h2>
+                </div>
+            </div>
+            <div class="reviewer-comment">
+                <i class="fa-solid fa-quote-left"></i>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis tenetur voluptas magnam a labore sed corporis dolores omnis quo repellat beatae, repudiandae voluptatum, alias, earum deserunt rerum inventore corrupti pariatur.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- reviews ends -->
+
+    <!-- Similiar products recommendation -->
+    <section class="best-selling">
+        <h1 class="best-selling-h1"> Similiar Products</h1>
+        <div class="best-selling-product">
+            <% products.slice(0,4).forEach(item => { %>
+                <div class="prod-card">
+                    <img src="images/<%= item.image %>" alt="img" class="prod-img" />
+
+                    <% if(item.sale_price){ %>
+                        <h3>$<strong class="red"><%= item.sale_price %></strong></h3>
+                        <h3 style="text-decoration: line-through; font-size: small;">$<strong class="red"><%= item.price %></strong></h3>
+                
+                    <% }else{ %>
+                        <h3>$<strong class="red"><%= item.price %></strong></h3>
+                    <% } %>
+                    <span class="prod-name"><%= item.name %> <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                    <i><img src="images/star.png"/></i>
+                    <i><img src="images/star.png"/></i>
+                    <i><img src="images/star.png"/></i>
+                    <i><img src="images/star.png"/></i>
+
+
+                    <form action="/add_to_cart" method="post">
+                        <input type="hidden" name="id" value="<%= item.id %>">
+                        <input type="hidden" name="name" value="<%= item.name %>">
+                        <input type="hidden" name="price" value="<%= item.price %>">
+                        <input type="hidden" name="image" value="<%= item.image %>">
+                        <input type="hidden" name="sale_price" value="<%= item.sale_price %>">
+                        <input type="hidden" name="quantity" value="1" min="1">
+                        <input type="submit" value="Add to cart" class="btn btn-primary">
+                    </form>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+    <!-- Similiar products recommendation ends-->
+
+<%- include('./_header_footer/pagfooter') %>   
