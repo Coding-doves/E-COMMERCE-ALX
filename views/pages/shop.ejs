@@ -22,13 +22,8 @@
                                     <h3>$<strong class="red"><%= item.price %></strong></h3>
                                 <% } %>
                                 <span class="prod-name"><%= item.name %> <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
-                                <!--rating--
-                                <i><img src="images/star.png"/></i>
-                                <i><img src="images/star.png"/></i>
-                                <i><img src="images/star.png"/></i>
-                                <i><img src="images/star.png"/></i>
-                                -->
                             </div>
+                            <input type="submit" value="Shop Now" class="btn buy">
                         </a>
     
                         <form action="/add_to_cart" method="post">
@@ -38,7 +33,7 @@
                             <input type="hidden" name="image" value="<%= item.image %>">
                             <input type="hidden" name="sale_price" value="<%= item.sale_price %>">
                             <input type="hidden" name="quantity" value="1" min="1">
-                            <input type="submit" value="Shop Now" class="btn buy">
+                            <input type="submit" value="Add to basket" class="btn btn-primary">
                         </form>
                     </div>
                 <% }) %>

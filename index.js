@@ -175,8 +175,10 @@ app.get('/product/:id', function(req, res) {
         }
 
         const product = result[0];
+        
+        const { total, item_count } = calculateTotalCartItem(request);
 
-        res.render('pages/product', {productId});
+        res.render('pages/product', {productId, item_count: item_count});
     });
 });
 
