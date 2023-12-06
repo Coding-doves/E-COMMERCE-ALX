@@ -47,7 +47,7 @@ And So i decided to built it as a Portfolio Project for Holberton School
 - LinkedIn: https://www.linkedin.com/in/ada-okonkwo-a1b597229/
 - X: https://twitter.com/AdaOkonk1
 
-### Tools To be  used
+### Tools used
 
 - Nodejs with Express
 - MySQL DB
