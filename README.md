@@ -15,7 +15,7 @@ Building an ecommerce site with blockchain payment system also with the traditio
 ## Smart contract
 To be built on Etherum
 ## Other payment intergration
-stripe and/or paypal
+stripe payment system
 
 <a name="features"></a>
 ### Some Features
