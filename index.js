@@ -3,26 +3,20 @@
 const express = require('express');
 const ejs = require('ejs');
 const bodyParser  = require('body-parser');
-const mysql = require('mysql');
 const session = require('express-session')
 const { hostname } = require('os');
+const connection = require('./routes/db');
 const path = require('path');
 const { body, validationResult } = require('express-validator');
 const cartRoute = require('./routes/cartBasket');
-const paymentRoute = require('./routes/product');
+const paymentRoute = require('./routes/payment');
 const adminRoute = require('./routes/admin');
-const productRoute = require('./routes/payment');
+const productRoute = require('./routes/product');
 const calculateTotalCartItem = require('./routes/cartUtils');
 
 //const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY);
 
-//connect to mysql database.
-const connection = mysql.createConnection({
-    host:"localhost",
-    user:"root",
-    password:"",
-    database:"e-commerce_project"
-});
+
 
 //const hostname = '0.0.0.0';
 const port = /*process.env.PORT ||*/5000;
@@ -97,21 +91,16 @@ app.get(['/', '/shop'], function(request, response) {
 });
 
 //all product routes
-app.use('/product/:id', productRoute);
+app.use('/product', productRoute);
 
 //all cart routes
-app.use('/update_quantity', cartRoute);
-app.use('/add_to_cart', cartRoute);
-app.use('/remove_item', cartRoute);
+app.use('/cart', cartRoute);
 
 //all payment routes
-app.use('/checkout', paymentRoute);
-app.use('/place_order', paymentRoute);
-app.use('/payment', paymentRoute);
+app.use('/pay', paymentRoute);
 
 //all admin routes
-app.use('/admin/admin_page', adminRoute);
-app.use('/admin/add_page', adminRoute);
+app.use('/admin', adminRoute);
 
 
 

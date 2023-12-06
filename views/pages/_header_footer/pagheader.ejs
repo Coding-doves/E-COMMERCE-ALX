@@ -116,7 +116,7 @@
 
                             
                             <!-- add more product -->
-                            <form action="/update_quantity" method="post">
+                            <form action="/cart/update_quantity" method="post">
                                 <td style="display: flex; flex-direction: column; gap: 4px;">
                                     <input type="number" name="quantity" value="<%= item.quantity %>" style="width:80%;" min="1">
                                     <input type="hidden" name="id" value="<%= item.id %>">
@@ -164,7 +164,7 @@
 
             <!-- checkout button-->
             <div class="checkout">
-                <form action="/checkout" method="get">
+                <form action="/pay/checkout" method="get">
                     <input type="submit" value="CHECKOUT" name="" class="btn btn-primary">
                 </form>
             </div>

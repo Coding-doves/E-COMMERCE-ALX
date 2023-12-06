@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const connection = require('./db');
 const calculateTotalCartItem = require('./cartUtils');
 
 // work on product 
-router.get('/', function(req, res) {
+router.get('/:id', function(req, res) {
     const product = req.params.id;
 
     // retrieve data from database that has the id

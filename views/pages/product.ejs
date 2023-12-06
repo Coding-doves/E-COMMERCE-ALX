@@ -110,7 +110,7 @@
         <h1 class="best-selling-h1"> Similiar Products</h1>
         <div class="best-selling-product">
             <% products.slice(0,4).forEach(item => { %>
-                <a href="/product/<%= item.id %>">
+                <a href="/product/product/<%= item.id %>">
                     <div class="prod-card">
                         <img src="/../images/<%= item.image %>" alt="img" class="prod-img" />
 
@@ -128,7 +128,7 @@
                         <i><img src="/../images/star.png"/></i>
 
 
-                        <form action="/add_to_cart" method="post">
+                        <form action="/cart/add_to_cart" method="post">
                             <input type="hidden" name="id" value="<%= item.id %>">
                             <input type="hidden" name="name" value="<%= item.name %>">
                             <input type="hidden" name="price" value="<%= item.price %>">

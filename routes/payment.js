@@ -5,7 +5,7 @@ const calculateTotalCartItem = require('./cartUtils');
 // Rest of your code...
 
 // load checkout page
-router.get('/', function(req, res) {
+router.get('/checkout', function(req, res) {
     calculateTotalCartItem(req);
     let total = req.session.total;
 
@@ -13,7 +13,7 @@ router.get('/', function(req, res) {
 });
 
 // push to db client data and payment status
-router.post('/',function(req, res) {
+router.post('/place_order',function(req, res) {
     let product_id  = "";
     let name = req.body.name;
     let email = req.body.email;
@@ -43,7 +43,7 @@ router.post('/',function(req, res) {
 });
 
 // work on payment later
-router.get('/', function(req, res) {
+router.get('/payment', function(req, res) {
     res.render('pages/payment');
 });
 

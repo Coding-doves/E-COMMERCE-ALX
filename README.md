@@ -1,5 +1,7 @@
 ![index page](image-1.png)
 # Building an ecommerce site with blockchain payment system also with the traditional payment system
+https://intranet.alxswe.com/projects/
+
 ## Smart contract
 To be built on Etherum
 ## Other payment intergration
@@ -17,7 +19,11 @@ you can view whatever picked in the basket without leave the current market plac
 mum
 
 ### social links
-- 
+- GitHub:
+- LinkedIn:
+- X:
+
+### Repo Link
 - 
 ### Tools To be  used
 

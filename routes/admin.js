@@ -7,7 +7,7 @@ const calculateTotalCartItem = require('./cartUtils');
 
 // admin route
 // GET request to display the form
-router.get('/', function(req, res) {
+router.get('/admin/admin_page', function(req, res) {
 
     // Initialize variables with default values
     const name = "";
@@ -30,7 +30,7 @@ router.get('/', function(req, res) {
 });
 
 // POST request to handle form submission
-router.post('/', upload.single('image'), [
+router.post('/admin/add_page', upload.single('image'), [
     body('prod_name').notEmpty().withMessage('Product must have a name'),
     body('image').notEmpty().withMessage('Image must have a value'),
     ], function(req, res) {

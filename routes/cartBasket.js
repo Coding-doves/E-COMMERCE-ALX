@@ -3,7 +3,7 @@ const router = express.Router();
 const calculateTotalCartItem = require('./cartUtils');
 
 // update /add_to_cart when item quantity is increased in the cartbasket 
-router.post('/', (req, res) => {
+router.post('/update_quantity', (req, res) => {
     const id = req.body.id;
     const quantity = parseInt(req.body.quantity);
 
@@ -17,7 +17,7 @@ router.post('/', (req, res) => {
 });
 
 // add items to cart
-router.post('/', (req, res) => {
+router.post('/add_to_cart', (req, res) => {
     const id = req.body.id;
     const name = req.body.name;
     const image = req.body.image;
@@ -49,7 +49,7 @@ router.post('/', (req, res) => {
 });
 
 // remove item from cartbasket
-router.get('/', (req, res) => {
+router.get('/remove_item', (req, res) => {
     const id = req.query.id;
 
     for (let i = 0; i < req.session.cart.length; i++) {

@@ -21,7 +21,7 @@
                         <span class="prod-name"><%= item.name %> <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
 
 
-                        <form action="/add_to_cart" method="post">
+                        <form action="/cart/add_to_cart" method="post">
                             <input type="hidden" name="id" value="<%= item.id %>">
                             <input type="hidden" name="name" value="<%= item.name %>">
                             <input type="hidden" name="price" value="<%= item.price %>">
