@@ -22,7 +22,8 @@ you can view whatever picked in the basket without leave the current market plac
 ![review](image-3.png)
 user are able to leave their opion about any product go or bad. This aids in track poor customer experience.
 
-- 
+- Blockchain payment and tradition payment
+You also purchase either with stripe payment system or pay with your eth.
 
 ## Project Inspiration
 The insiration to build an e-commerce came form the desire of wanting to create an e-commerce store for my mum who is a mobile trade. I hope this will grow her business with less stress. Enabling her customer see her product for thier comfort zone while placing order.
