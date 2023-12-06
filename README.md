@@ -30,11 +30,10 @@ You also purchase either with stripe payment system or pay with your eth.
 
 <a name="story"></a>
 ## Project Inspiration
-The insiration to build an e-commerce came form the desire of wanting to create an e-commerce store for my mum who is a mobile trade. I hope this will grow her business with less stress. Enabling her customer see her product for thier comfort zone while placing order.
-
-I also wanted to enable platform where crypto coins owners can purchase need items with their assest without having to worry about converting it or withdrawing it a thier local banks before transacting.
-
-And So i decided to built it as a Portfolio Project for Holberton School with a link.
+The inspiration to build an ecommerce came from the desire of wanting to create an ecommerce store for my mum who is a mobile trade. I hope this will grow her business with less stress. Enabling her customer see her product for their comfort zone while placing order.
+I also wanted to enable platform where crypto coins owners can purchase need items with their assets without having to worry about converting it or withdrawing it a their local banks before transacting.
+And So i decided to built it as a Portfolio Project for Holberton School 
+ [![Holberton School]](https://www.holbertonschool.com/).
 
 <a name="repo-link"></a>
 ### Repo Link
