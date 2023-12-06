@@ -12,7 +12,10 @@ stripe and/or paypal
 
 you can view whatever picked in the basket without leave the current market place you are on. increase and also decrease the quatity there in the basket 
 
-- 
+- Review Product
+![review](image-3.png)
+user are able to leave their opion about any product go or bad. This aids in track poor customer experience.
+ 
 - 
 
 ## Project Inspiration
