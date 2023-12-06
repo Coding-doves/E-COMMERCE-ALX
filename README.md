@@ -1,6 +1,6 @@
 ![index page](image-1.png)
 # Building an ecommerce site with blockchain payment system also with the traditional payment system
-http://browndove.tech
+http://browndove.tech/E-COMMERCE-ALX
 
 ## Smart contract
 To be built on Etherum
@@ -35,7 +35,9 @@ I also wanted to enable platform where crypto coins owners can purchase need ite
 - Nodejs with Express
 - MySQL DB
 - Solidity
-- Etherum
 - HTML5, CSS, and JS
 - Bootstrap
+- Openzepplin
+- Splash(for free images)
+- google font(for free font)
 
