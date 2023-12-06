@@ -3,7 +3,7 @@
 
     <!-- product details -->
     <section class="goods-sect">
-        <img src="images/bag-coffee.png" alt="" class="goods">
+        <img src="/../images/<%= product.image %>" alt="" class="goods">
         <div class="goods-details">
             <h1 class="goods-title"><%= product.name %></h1>
             <span class="brand">Brand: <%=product.brand %></span> <br>
@@ -12,10 +12,10 @@
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus enim, qui, soluta sequi culpa incidunt voluptate asperiores, eum dignissimos aperiam laudantium neque!
             </div>
             <div class="rate">
-                <i><img src="images/star.png"/></i>
-                <i><img src="images/star.png"/></i>
-                <i><img src="images/star.png"/></i>
-                <i><img src="images/star.png"/></i>
+                <i><img src="/../images/star.png"/></i>
+                <i><img src="/../images/star.png"/></i>
+                <i><img src="/../images/star.png"/></i>
+                <i><img src="/../images/star.png"/></i>
                 <span class="rate-num">5,180 reviews</span>
             </div>
             <div class="goods-btn">
@@ -48,10 +48,10 @@
                 <textarea name="" id="" cols="30" rows="10" placeholder="Your comment" class="review-field"></textarea>
                 <span class="rating-text">Give a thumbs up if this a good product?</span>
                 <div class="star">
-                    <i><img class="rating-star" src="images/no-star.png"/></i>
-                    <i><img class="rating-star" src="images/no-star.png"/></i>
-                    <i><img class="rating-star" src="images/no-star.png"/></i>
-                    <i><img class="rating-star" src="images/no-star.png"/></i>
+                    <i><img class="rating-star" src="/../images/no-star.png"/></i>
+                    <i><img class="rating-star" src="/../images/no-star.png"/></i>
+                    <i><img class="rating-star" src="/../images/no-star.png"/></i>
+                    <i><img class="rating-star" src="/../images/no-star.png"/></i>
                 </div>
             </div>
             <button>submit review</button>
@@ -67,11 +67,10 @@
 
                 <div class="reviewer">
                     <div class="reviewer-rating">
-                        <i><img src="images/star.png"/></i>
-                        <i><img src="images/star.png"/></i>
-                        <i><img src="images/star.png"/></i>
-                        <i><img src="images/no-star.png"/></i>
-                        <p>400</p>
+                        <i><img src="/../images/star.png"/></i>
+                        <i><img src="/../images/star.png"/></i>
+                        <i><img src="/../images/star.png"/></i>
+                        <i><img src="/../images/star.png"/></i>
                     </div>
                     <h2 class="reviewer-name">Ada</h2>
                 </div>
@@ -88,11 +87,10 @@
                 <img src="/images/godisable.png" alt="" class="rever-img">
                 <div class="reviewer">
                     <div class="reviewer-rating">
-                        <i><img src="images/star.png"/></i>
-                        <i><img src="images/star.png"/></i>
-                        <i><img src="images/star.png"/></i>
-                        <i><img src="images/star.png"/></i>
-                        <p>5,320</p>
+                        <i><img src="/../images/star.png"/></i>
+                        <i><img src="/../images/star.png"/></i>
+                        <i><img src="/../images/star.png"/></i>
+                        <i><img src="/../images/star.png"/></i>
                     </div>
                     <h2 class="reviewer-name">Ada</h2>
                 </div>
@@ -112,22 +110,53 @@
         <h1 class="best-selling-h1"> Similiar Products</h1>
         <div class="best-selling-product">
             <% products.slice(0,4).forEach(item => { %>
-                <div class="prod-card">
-                    <img src="images/<%= item.image %>" alt="img" class="prod-img" />
+                <a href="/product/<%= item.id %>">
+                    <div class="prod-card">
+                        <img src="/../images/<%= item.image %>" alt="img" class="prod-img" />
 
-                    <% if(item.sale_price){ %>
-                        <h3>$<strong class="red"><%= item.sale_price %></strong></h3>
-                        <h3 style="text-decoration: line-through; font-size: small;">$<strong class="red"><%= item.price %></strong></h3>
-                
-                    <% }else{ %>
-                        <h3>$<strong class="red"><%= item.price %></strong></h3>
-                    <% } %>
-                    <span class="prod-name"><%= item.name %> <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
-                    <i><img src="images/star.png"/></i>
-                    <i><img src="images/star.png"/></i>
-                    <i><img src="images/star.png"/></i>
-                    <i><img src="images/star.png"/></i>
+                        <% if(item.sale_price){ %>
+                            <h3>$<strong class="red"><%= item.sale_price %></strong></h3>
+                            <h3 style="text-decoration: line-through; font-size: small;">$<strong class="red"><%= item.price %></strong></h3>
+                    
+                        <% }else{ %>
+                            <h3>$<strong class="red"><%= item.price %></strong></h3>
+                        <% } %>
+                        <span class="prod-name"><%= item.name %> <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                        <i><img src="/../images/star.png"/></i>
+                        <i><img src="/../images/star.png"/></i>
+                        <i><img src="/../images/star.png"/></i>
+                        <i><img src="/../images/star.png"/></i>
 
+
+                        <form action="/add_to_cart" method="post">
+                            <input type="hidden" name="id" value="<%= item.id %>">
+                            <input type="hidden" name="name" value="<%= item.name %>">
+                            <input type="hidden" name="price" value="<%= item.price %>">
+                            <input type="hidden" name="image" value="<%= item.image %>">
+                            <input type="hidden" name="sale_price" value="<%= item.sale_price %>">
+                            <input type="hidden" name="quantity" value="1" min="1">
+                            <input type="submit" value="Add to basket" class="btn btn-primary">
+                        </form>
+                    </div>
+                </a>
+            <% }) %>
+            <!--<% products.slice(0,4).forEach(item => { %>
+                <div class="card-grid">
+                    <a href="/product/<%= item.id %>">
+                        <div class="prod-card">
+                            <img src="images/<%= item.image %>" alt="img" class="prod-img" />
+    
+                            <% if(item.sale_price){ %>
+                                <h3>$<strong class="red"><%= item.sale_price %></strong></h3>
+                                <h3 style="text-decoration: line-through; font-size: small;">$<strong class="red"><%= item.price %></strong></h3>
+                        
+                            <% }else{ %>
+                                <h3>$<strong class="red"><%= item.price %></strong></h3>
+                            <% } %>
+                            <span class="prod-name"><%= item.name %> <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                        </div>
+                        <input type="submit" value="Shop Now" class="btn buy">
+                    </a>
 
                     <form action="/add_to_cart" method="post">
                         <input type="hidden" name="id" value="<%= item.id %>">
@@ -136,10 +165,10 @@
                         <input type="hidden" name="image" value="<%= item.image %>">
                         <input type="hidden" name="sale_price" value="<%= item.sale_price %>">
                         <input type="hidden" name="quantity" value="1" min="1">
-                        <input type="submit" value="Add to cart" class="btn btn-primary">
+                        <input type="submit" value="Add to basket" class="btn btn-primary">
                     </form>
                 </div>
-            <% }) %>
+            <% }) %>-->
         </div>
     </section>
     <!-- Similiar products recommendation ends-->

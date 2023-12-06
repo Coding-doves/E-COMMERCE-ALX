@@ -64,7 +64,7 @@ connection.connect((error) => {
 
 // root: localhost:8080
 // route loads product data /landing page
-app.get(['/', '/shop','/product', '/404'], function(request, response) {
+app.get(['/', '/shop'/*,'/product'*/], function(request, response) {
     query = "SELECT * FROM products"; /*LIMIT 6*/
     connection.query(query, (err, result)=>{
         // Ensure that req.session.cart is defined
@@ -83,9 +83,9 @@ app.get(['/', '/shop','/product', '/404'], function(request, response) {
             case '/shop':
                 pageToRender = 'pages/shop';
                 break;
-            case '/product':
+            /*case '/product':
                 pageToRender = 'pages/product';
-                break;
+                break;*/
             default:
                 break;
         }
@@ -157,28 +157,36 @@ app.get('/remove_item', (req, res) => {
 
 // work on product 
 app.get('/product/:id', function(req, res) {
-    const productId = req.params.id;
+    const product = req.params.id;
+
     // retrieve data from database that has the id
-    const query = "SELECT * FROM products WHERE id = ?";
+    const queryIds = "SELECT * FROM products WHERE id = ?";
+    const query = "SELECT * FROM products";
 
-    connection.query(query,  [productId], (err, result) => {
-        if (err) {
-            console.error(err);
-            res.status(500).send('Internal Server Error');
-            return;
-        }
+        connection.query(queryIds,  [product], (err, result) => {
+            if (err) {
+                console.error(err);
+                res.status(500).send('Internal Server Error');
+                return;
+            }
 
-        if (result.length  === 0) {
-            // Handle the case where the product with the given ID is not found
-            res.status(404).send('Product not found');
-            return
-        }
+            if (result.length  === 0) {
+                // Handle the case where the product with the given ID is not found
+                res.status(404).send('Product not found');
+                return
+            }
 
-        const product = result[0];
-        
-        const { total, item_count } = calculateTotalCartItem(req);
+            const product = result[0];
+            
+            connection.query(query, (err, result)=>{
+                // Ensure that req.session.cart is defined
+                if(!req.session.cart) {
+                    req.session.cart = [];
+                }
+            const { total, item_count } = calculateTotalCartItem(req);
 
-        res.render('pages/product', {productId, item_count: item_count});
+            res.render('pages/product', {product, products: result, item_count, cart: req.session.cart});
+        });
     });
 });
 
