@@ -16,12 +16,14 @@ you can view whatever picked in the basket without leave the current market plac
 - 
 
 ## Project Inspiration
-mum
+The insiration to build an e-commerce came form the desire of wanting to create an e-commerce store for my mum who is a mobile trade. I hope this will grow her business with less stress. Enabling her customer see her product for thier comfort zone while placing order.
+
+I also wanted to enable platform where crypto coins owners can purchase need items with their assest without having to worry about converting it or withdrawing it a thier local banks before transacting. 
 
 ### social links
-- GitHub:
-- LinkedIn:
-- X:
+- GitHub: https://github.com/Coding-doves
+- LinkedIn: https://www.linkedin.com/in/ada-okonkwo-a1b597229/
+- X: https://twitter.com/AdaOkonk1
 
 ### Repo Link
 - 
