@@ -3,7 +3,7 @@
 # Building an ecommerce site with blockchain payment system also with the traditional payment system
 [![Visit My Site]](http://browndove.tech/E-COMMERCE-ALX)
 
-# My Project
+# LOOK UP
 
 - [Repo Link](#repo-link)
 - [Inspiration](#story)
