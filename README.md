@@ -1,6 +1,6 @@
 ![index page](image-1.png)
 # Building an ecommerce site with blockchain payment system also with the traditional payment system
-https://intranet.alxswe.com/projects/
+http://browndove.tech
 
 ## Smart contract
 To be built on Etherum
@@ -15,7 +15,7 @@ you can view whatever picked in the basket without leave the current market plac
 - Review Product
 ![review](image-3.png)
 user are able to leave their opion about any product go or bad. This aids in track poor customer experience.
- 
+
 - 
 
 ## Project Inspiration
