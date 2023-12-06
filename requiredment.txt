@@ -1,0 +1,16 @@
+install nodejs
+install npm
+npm install
+
+ssh username@your_server_ip
+sudo apt update
+sudo apt install nodejs
+sudo apt install npm
+
+node -v
+npm -v
+
+git clone https://github.com/your_username/your_project.git
+cd your_project
+npm install
+node your_program.js
