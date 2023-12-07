@@ -39,13 +39,23 @@ And So i decided to built it as a Portfolio Project for Holberton School
  [![Holberton School]](https://www.holbertonschool.com/).
 
 <a name="repo-link"></a>
-### Repo Link
+### Repo (project) Link
 - https://github.com/Coding-doves/E-COMMERCE-ALX
 
-### social links
+### Author's social links
 - GitHub: https://github.com/Coding-doves
 - LinkedIn: https://www.linkedin.com/in/ada-okonkwo-a1b597229/
 - X: https://twitter.com/AdaOkonk1
+
+### Installation
+
+### Usage
+
+### Contributing
+
+### Related projects
+
+### Licensing
 
 ### Tools used
 
