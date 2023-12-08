@@ -67,7 +67,7 @@ And So i decided to built it as a Portfolio Project for Holberton School
 
 ## Video Demo
 
-[Demo Video](public/video/video.mp4)
+![Demo Video](public/video/video.mp4)
 
 
 [Back to Top](#up)
