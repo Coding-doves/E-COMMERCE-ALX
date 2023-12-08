@@ -1,7 +1,7 @@
 <a name="up"></a>
 ![index page](image-1.png)
 # Building an ecommerce site with blockchain payment system also with the traditional payment system
-[![Visit My Site]](http://browndove.tech/E-COMMERCE-ALX)
+[![Visit My Site]](http://browndove.tech/E-COMMERCE-ALX/index.js)
 
 # LOOK UP
 
