@@ -37,13 +37,14 @@ You also purchase either with stripe payment system or pay with your eth.
 The inspiration to build an ecommerce came from the desire of wanting to create an online store for my mum who is a mobile trade. I hope this will grow her business with less stress. Enabling her customer see her product for their comfort zone while placing order.
 I also wanted to enable platform where crypto coins owners can purchase need items with their assets without having to worry about converting it or withdrawing it a their local banks before transacting.
 And So i decided to built it as a Portfolio Project for Holberton School 
- [![Holberton School]](https://www.holbertonschool.com/).
+[![Holberton School]](https://www.holbertonschool.com/).
 
 ## My Portfolio Project: A Human Journey in Code
 - Introduction
-Welcome to my portfolio project, a digital representation of my journey through the world of coding. This project is not just about showcasing technical skills but about sharing the human experience behind the keyboard. As you explore this portfolio, you'll find not just lines of code but a story of inspiration, challenges, and the relentless pursuit of improvement.
 
-[Visit My Portfolio](http://browndove.tech/E-COMMERCE-ALX)
+    Welcome to my portfolio project, a digital representation of my journey through the world of coding. This project is not just about showcasing technical skills but about sharing the human experience behind the keyboard. As you explore this portfolio, you'll find not just lines of code but a story of inspiration, challenges, and the relentless pursuit of improvement.
+
+    [Visit My Portfolio](http://browndove.tech/E-COMMERCE-ALX)
 
 
 - Author:
@@ -63,7 +64,7 @@ Welcome to my portfolio project, a digital representation of my journey through 
     As a trainee, it really confusing trying to put together the tools one has been given to acheive this project. This is where google and youtube came to the recuse, they were of great help to me. implemeting the logic to build this project wasn't any easy one for me. Being aware during the cause of my training in Alx, that the logic needed implement this task can be used across programming language I decided to work with nodejs and express. At first, it was easy and simple; setting up the needed folders and files, installing, importing and connecting express, nodejs, multer, ejs
     , body-paser, mysql ..., was all fun at first. I created the database and tables I would likely need for starting. Then, CRUD (Create Read Update Delete) stepped forward; I began working and learning how get desired pages and post desired forms. And so, the page grew bigger, messy and confusing. At this point, Router showed up; it was called and put to use, this handled the mess but not the confusion. Burnout was my companion a lot of times it can be frustrating not knowing how to implement a feature or seeing ones program crash and bug filled. Presently, the project is in progress...
 
-    - The Human Touch
+- The Human Touch
 
     Behind every commit, every algorithm, and every design choice, there's a human being with a story. This portfolio is a reminder that the coder is not just a machine producing code but a person with passion, creativity, and a unique approach to problem-solving. I hope you see beyond the code and connect with the person behind the keyboard - someone you'd want to work with, collaborate with, and learn from.
 
@@ -73,7 +74,7 @@ Welcome to my portfolio project, a digital representation of my journey through 
 
 - Visual Highlight
 
-![Demo picture](Capture.PNG)
+    ![Demo picture](Capture.PNG)
 
 - Conclusion
 
