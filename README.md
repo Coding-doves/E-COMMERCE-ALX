@@ -1,7 +1,7 @@
 <a name="up"></a>
 ![index page](image-1.png)
 # Building an ecommerce site with blockchain payment system also with the traditional payment system
-[![Visit My Site]](http://browndove.tech/E-COMMERCE-ALX/index.js)
+[![Visit My Site]](http://browndove.tech/E-COMMERCE-ALX)
 
 # LOOK UP
 
@@ -12,7 +12,7 @@
 ## Smart contract
 To be built on Etherum
 ## Other payment intergration
-stripe and/or paypal
+stripe payment system
 
 <a name="features"></a>
 ### Some Features
@@ -36,15 +36,25 @@ And So i decided to built it as a Portfolio Project for Holberton School
  [![Holberton School]](https://www.holbertonschool.com/).
 
 <a name="repo-link"></a>
-### Repo Link
+### Repo (project) Link
 - https://github.com/Coding-doves/E-COMMERCE-ALX
 
-### social links
+### Author's social links
 - GitHub: https://github.com/Coding-doves
 - LinkedIn: https://www.linkedin.com/in/ada-okonkwo-a1b597229/
 - X: https://twitter.com/AdaOkonk1
 
-### Tools To be  used
+### Installation
+
+### Usage
+
+### Contributing
+
+### Related projects
+
+### Licensing
+
+### Tools used
 
 - Nodejs with Express
 - MySQL DB
@@ -55,4 +65,4 @@ And So i decided to built it as a Portfolio Project for Holberton School
 - Splash(for free images)
 - google font(for free font)
 
-- [Back to Top](#up)
+[Back to Top](#up)
