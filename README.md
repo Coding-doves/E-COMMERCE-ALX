@@ -67,7 +67,7 @@ And So i decided to built it as a Portfolio Project for Holberton School
 
 ## Video Demo
 
-<iframe width="560" height="315" src="https://vimeo.com/892513046/b2a741ab80?share=copy" frameborder="0" allowfullscreen></iframe>
+[Demo Video](public/video/video.mp4)
 
 
 [Back to Top](#up)
