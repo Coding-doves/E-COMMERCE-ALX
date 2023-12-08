@@ -44,7 +44,7 @@ Welcome to my portfolio project, a digital representation of my journey through 
 
 - Author:
 
-Ada Okonkwo - https://www.linkedin.com/in/ada-okonkwo-a1b597229/
+    Ada Okonkwo - https://www.linkedin.com/in/ada-okonkwo-a1b597229/
 
 - Inspiration and Purpose
 
@@ -68,7 +68,8 @@ Behind every commit, every algorithm, and every design choice, there's a human b
 This portfolio is a living document of my coding journey, and just like any good code, it's open to continuous improvement. In the next iteration, I envision expanding the project with more interactive elements, incorporating feedback from the community, and diving into new technologies. The journey doesn't end here; it evolves, and so does this portfolio.
 
 - Visual Highlight
-![Demo Video](public/video/video.mp4)
+
+![Demo picture](Capture.PNG)
 
 - Conclusion
 
