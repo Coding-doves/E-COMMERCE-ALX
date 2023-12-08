@@ -17,18 +17,30 @@ stripe payment system
 
 <a name="features"></a>
 
-### Some Features
-- Add to Basket
-![basket](image-2.png)
+### Features Implemented
+-   Product Catalog and Cart Functionality:
 
-you can view whatever picked in the basket without leave the current market place you are on. increase and also decrease the quatity there in the basket 
+    ![basket](image-2.png)
+
+    Description: Users can browse a catalog of products, add items to their cart, and proceed to checkout leave the current market place you are on.
+
+    Value for User: Streamlined shopping experience with the ability to manage and review selected items.
+
+- Secure Payment Processing:
+
+    Description: Integrated Stripe API for secure online payment transactions.
+
+    Value for User: Ensures safe and reliable payment processing, building trust in the online shopping experience.
 
 - Review Product
-![review](image-3.png)
-user are able to leave their opion about any product go or bad. This aids in track poor customer experience.
+
+    ![review](image-3.png)
+
+    Value for User: User are able to leave their opion about any product go or bad. This aids in track poor customer experience.
 
 - Blockchain payment and tradition payment
-You also purchase either with stripe payment system or pay with your eth.
+
+    Value for User: You also purchase either with stripe payment system or pay with your eth.
 
 <a name="story"></a>
 
@@ -119,8 +131,22 @@ clone the repo in intergrated payment system that has not been intergrated and s
 - [Some list of Java](https://github.com/Coding-doves/UoPeople_Code.git)
 - [School site UI](https://github.com/Coding-doves/schoolsite)
 
-### Tools used
+### Technologies
 
+This project will be a fully functional online store built using Node.js, providing a seamless shopping experience for users. The architecture diagram above outlines the flow of data through the application, demonstrating how the frontend, backend, and database interact.
+
+- Technologies Used
+    - Frontend:
+        - HTML5, CSS3, JavaScript (Vanilla), Bootstrap: I opted to use this web technologies to solidify my understanding of them al especially JavaScript.
+    - Backend:
+        - Node.js: Chosen for its non-blocking event-driven architecture, which aligns with the requirements of a dynamic online store.
+        - Express.js: Used as the web application framework to streamline the development of the server-side logic.
+        - Database: MySQL
+        - Authentication: Not yet implemented
+        - Payment Processing:
+            - Stripe API: Integrated to handle secure and seamless online payment transactions.
+
+### Tools
 - Nodejs with Express
 - MySQL DB
 - Solidity
