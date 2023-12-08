@@ -112,5 +112,5 @@ app.get('*', function(request, response) {
 
 
 app.listen(port, () => {
-    console.log('Server started on localhost:5000')
+    console.log(`Server started on localhost:${port}`)
 });
