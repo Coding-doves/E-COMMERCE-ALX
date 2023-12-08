@@ -65,6 +65,9 @@ And So i decided to built it as a Portfolio Project for Holberton School
 - Splash(for free images)
 - google font(for free font)
 
-![summary](https://vimeo.com/892513046/b2a741ab80?share=copy)
+## Video Demo
+
+<iframe width="560" height="315" src="https://vimeo.com/892513046/b2a741ab80?share=copy" frameborder="0" allowfullscreen></iframe>
+
 
 [Back to Top](#up)
